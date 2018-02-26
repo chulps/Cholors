@@ -1,8 +1,16 @@
 * {
     box-sizing: border-box;
+	color: #aaa;
 }
 
 
+a{
+	color:#aaa;
+}
+
+a:hover{
+	color:black;
+}
 
 table {
 	width: 100%;
@@ -32,5 +40,5 @@ td:hover {
 }
 
 .controls {
-	padding: 0 0 2% 0;
+	padding: 0 0 1% 0;
 }
