@@ -1,13 +1,21 @@
-#example1 {
+* {
     box-sizing: border-box;
 }
 
+
+
 table {
 	width: 100%;
+	
 }
 
 td {
 	background-color: #ffffff;
 	padding: 5px;
+	
 
+}
+
+td:hover {
+	color: white;
 }
