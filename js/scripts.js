@@ -40,21 +40,23 @@ function setRandomColor(td) {
   //}) 
 }
 
+var cnt = 1;
+
 function hexc(colorval) {
   var parts = colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
   delete(parts[0]);
   for (var i = 1; i <= 3; ++i) {
     parts[i] = parseInt(parts[i]).toString(16);
-    if (parts[i].length == 1) parts[i] = '0' + parts[i];
+    if (parts[i].length === 1) parts[i] = '0' + parts[i];
   }
   //try to avoid writing functions that change a variable outside of the function. instead, return a value
   //from the function, and assign/use that value where desired by calling this function from that place
   
   //colorX = '#' + parts.join('');
-	return '#' + parts.join('');
+	return '[' + cnt + '] - ' + '#' + parts.join('');
 }
 
-var cnt = 1;
+
 
 $("#anc_roll").click(function(){
 	//.each will call the function passed to it once for *each* element that the $('td') selector gets 
@@ -67,8 +69,8 @@ $("#anc_roll").click(function(){
 });
 
 $("#anc_add").click(function(){
-	var color = getRandomColor()
-	$('#tbl1 tr').last().after('<tr><td style="background-color:' + color + '">' + '[' + cnt + '] - ' + color + '</td></tr>');
+	var color = getRandomColor();
+	$('#tbl1 tr').last().after('<tr><td style="background-color:' + color + '">' + color + '</td></tr>');
 	cnt++;
 });
 
@@ -78,9 +80,26 @@ $('#tbl1 tr:last-child').remove();
 }else{
 alert('One row should be present in table');
 }
-	if($('#tbl1 tr').size()>1){
-	$('#tbl1 tr:last-child').remove();
-	}else{
-	alert('There has to be at least one color');
-	}
+	
+});
+
+
+
+$("#anc_auto").click(function(){
+	setInterval(function() {
+      $("td").each(function() {
+  	setRandomColor(this);
+	});
+
+}, 2500);
+
+});
+
+$("#anc_stop").click(function(){
+	    var found;
+    for(i=0; i<10000; i++)
+    {
+        window.clearInterval(i);
+    }
+
 });
