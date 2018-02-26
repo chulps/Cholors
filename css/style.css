@@ -1,40 +1,13 @@
 #example1 {
     box-sizing: border-box;
-}table{
-        width: 100%;
-        margin: 20px 0;
-        border-collapse: collapse;
-    }
-    table, th, td{
-        border: 1px solid #cdcdcd;
-    }
-    table th, table td{
-        padding: 5px;
-        text-align: left;
-    }<style type="text/css">
-    table{
-        width: 100%;
-        margin: 20px 0;
-        border-collapse: collapse;
-    }
-    table, th, td{
-        border: 1px solid #cdcdcd;
-    }
-    table th, table td{
-        padding: 5px;
-        text-align: left;
-    }
-</style><style type="text/css">
-    table{
-        width: 100%;
-        margin: 20px 0;
-        border-collapse: collapse;
-    }
-    table, th, td{
-        border: 1px solid #cdcdcd;
-    }
-    table th, table td{
-        padding: 5px;
-        text-align: left;
-    }
-</style>
+}
+
+table {
+	width: 100%;
+}
+
+td {
+	background-color: #ffffff;
+	padding: 5px;
+
+}

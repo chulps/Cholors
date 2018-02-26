@@ -1,29 +1,25 @@
-$(document).ready(function(){
-
 function getRandomColor() {
-var letters = '0123456789ABCDEF';
-var color = '#';
-for (var i = 0; i < 6; i++) {
-color += letters[Math.floor(Math.random() * 16)];
-}
-return color;
+	var letters = '0123456789ABCDEF';
+	var color = '#';
+	for (var i = 0; i < 6; i++) {
+		color += letters[Math.floor(Math.random() * 16)];
+		}
+	return color;
 }
 
 function setRandomColor() {
-$("table").find("td").css("background-color", getRandomColor());
-console.log(color);
+	$("td").css("background-color", getRandomColor());
 }
-	
-	
 
 var cnt = 1;
 
 $("#anc_roll").click(function(){
-	setRandomColor();
+	setRandomColor();	
 });
 
 $("#anc_add").click(function(){
-	$('#tbl1 tr').last().after('<tr><td style="background-color:' + getRandomColor() + '">' + getRandomColor() + '[' +cnt+ ']</td></tr>');
+	var color = getRandomColor()
+	$('#tbl1 tr').last().after('<tr><td style="background-color:' + color + '">' + '[' + cnt + '] - ' + color + '</td></tr>');
 	cnt++;
 });
 
@@ -33,7 +29,9 @@ $('#tbl1 tr:last-child').remove();
 }else{
 alert('One row should be present in table');
 }
+	if($('#tbl1 tr').size()>1){
+	$('#tbl1 tr:last-child').remove();
+	}else{
+	alert('There has to be at least one color');
+	}
 });
-
-});
-
