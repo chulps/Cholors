@@ -35,10 +35,13 @@ td:hover {
 }
 
 
-#main {
-	margin-bottom: 140px;
-}
+
 
 .controls {
 	padding: 0 0 1% 0;
+}
+
+
+#main {
+	margin-bottom: 140px;
 }
