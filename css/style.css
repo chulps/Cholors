@@ -17,6 +17,12 @@ table {
 	
 }
 
+tr {
+	border-radius: 5%;
+	overflow: hidden;
+	border: 1px #aaa solid;
+}
+
 
 td {
 	background-color: #ffffff;
