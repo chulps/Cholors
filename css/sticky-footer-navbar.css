@@ -9,16 +9,10 @@ html {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 90px;
-  line-height: 80px; /* Vertically center the text there */
-text-align: center;
+  line-height: 80px; 
+  text-align: center;
 }
-
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
 
 body > .container {
   padding: 60px 15px 0;
