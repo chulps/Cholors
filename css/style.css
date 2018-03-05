@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 	color: #888;
+	
 }
 
 
@@ -24,6 +25,8 @@ tr {
 }
 
 
+
+
 td {
 	background-color: #ffffff;
 	padding: 2%;
@@ -38,23 +41,20 @@ td {
 
 td:hover {
 	color: white;
+	
 }
 
 
 .controls {
-	padding: 0 0 1% 0;
+	padding: 0 0 2% 0;
 }
 
 
 #main {
 	margin-bottom: 200px;
 }
-.anc_remove {
+
+
+.x_delete {
 	float: right;
-	display: none;
 }
-
-.anc_remove:hover {
-	display: block;
-}
-
