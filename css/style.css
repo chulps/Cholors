@@ -41,8 +41,6 @@ td:hover {
 }
 
 
-
-
 .controls {
 	padding: 0 0 1% 0;
 }
@@ -51,3 +49,12 @@ td:hover {
 #main {
 	margin-bottom: 200px;
 }
+.anc_remove {
+	float: right;
+	display: none;
+}
+
+.anc_remove:hover {
+	display: block;
+}
+

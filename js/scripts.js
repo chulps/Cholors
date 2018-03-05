@@ -34,20 +34,33 @@ function hexc(colorval) {
 
 
 $("#anc_roll").click(function(){
-	//.each will call the function passed to it once for *each* element that the $('td') selector gets 
+	
 	$("td").each(function() {
-  	//here, `this` refers to the element this inner function is being called against
-    //it's kind of weird, just a jquery quirk. we'll pass `this`, i.e. the td element,
-    //to our setRandomColor() function that handles just a single td
+  	
   	setRandomColor(this);
 	});
 });
 
 $("#anc_add").click(function(){
 	var color = getRandomColor();
-	$('#tbl1 tr').last().after('<tr><td style="background-color:' + color + '">' + color + '</td></tr>');
+	$('#tbl1 tr').last().after('<tr><td style="background-color:' + color + '">' + color + '</td></tr>');	
 	cnt++;
 });
+
+						
+								
+								
+						
+
+
+
+
+
+
+
+
+
+
 
 $("#anc_rem").click(function(){
 if($('#tbl1 tr').size()>1){
