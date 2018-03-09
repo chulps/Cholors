@@ -1,6 +1,9 @@
+
+
+
 * {
     box-sizing: border-box;
-	color: #888;
+	color: #aaa;
 	
 }
 
@@ -24,9 +27,6 @@ tr {
 	border: 1px #aaa solid;
 }
 
-
-
-
 td {
 	background-color: #ffffff;
 	padding: 2%;
@@ -35,15 +35,20 @@ td {
       -ms-transition: background-color 0.5s ease-out;  /* IE10 */
        -o-transition: background-color 0.5s ease-out;  /* Opera 10.5+ */
           transition: background-color 0.5s ease-out;
-	
-
 }
+
+
+
 
 td:hover {
 	color: white;
 	
 }
 
+td:hover .x_controls{
+	color: white;
+	display: block;
+}
 
 .controls {
 	padding: 0 0 2% 0;
@@ -56,5 +61,22 @@ td:hover {
 
 
 .x_delete {
+	margin-left: 15px;
+}
+
+.x_different {
+	margin-left: 15px;
+}
+
+.x_controls {
 	float: right;
+	display: none;
+}
+
+.x_copy {
+	margin-left: 15px;
+}
+
+.x_lock {
+	
 }
