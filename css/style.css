@@ -3,13 +3,16 @@
 
 * {
     box-sizing: border-box;
-	color: #aaa;
+	color: #888;
+
 	
 }
 
 
 a{
-	color:#aaa;
+	color:#888;
+	mix-blend-mode: multiply;
+
 }
 
 a:hover{
@@ -24,13 +27,13 @@ table {
 tr {
 	border-radius: 5%;
 	overflow: hidden;
-	border: 1px #aaa solid;
+	border: 1px #888 solid;
 }
 
 td {
 	background-color: #ffffff;
 	padding: 2%;
-	  -webkit-transition: background-color 0.5s ease-out;  /* Saf3.2+, Chrome */
+	 -webkit-transition: background-color 0.5s ease-out;  /* Saf3.2+, Chrome */
      -moz-transition: background-color 0.5s ease-out;  /* FF4+ */
       -ms-transition: background-color 0.5s ease-out;  /* IE10 */
        -o-transition: background-color 0.5s ease-out;  /* Opera 10.5+ */
@@ -52,6 +55,7 @@ td:hover .x_controls{
 
 .controls {
 	padding: 0 0 2% 0;
+	
 }
 
 
@@ -79,4 +83,13 @@ td:hover .x_controls{
 
 .x_lock {
 	
+}
+
+#bg {
+	float: right;
+	-webkit-transition: background-color 0.5s ease-out;  /* Saf3.2+, Chrome */
+     -moz-transition: background-color 0.5s ease-out;  /* FF4+ */
+      -ms-transition: background-color 0.5s ease-out;  /* IE10 */
+       -o-transition: background-color 0.5s ease-out;  /* Opera 10.5+ */
+          transition: background-color 0.5s ease-out;
 }
