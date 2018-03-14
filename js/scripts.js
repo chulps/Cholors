@@ -21,8 +21,6 @@ function setRandomColor(td) {
 	cnt++;
 }
 
-//<span class="x_lock"><input type="checkbox" aria-label="..."> Lock</span><a href="javascript:void(0);" class="x_copy">Copy</a>
-
 function hexc(colorval) {
 	var parts = colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
 	delete(parts[0]);
@@ -37,21 +35,24 @@ function hexc(colorval) {
 $("#anc_roll").click(function () {
 	$("td").each(function () {
 		setRandomColor(this);
-		cnt++
 	});	
 });
 
 $("#anc_add").click(function () {
 	var color = getRandomColor();
-	$('#tbl1 tr').last().after('<tr><td style="background-color:' + color + '"> [' + cnt + '] ' +'<span class="hexcode">' + color + '</span><span class="x_controls"><a href="javascript:void(0);" class="x_different">Different</a><a href="javascript:void(0);" class="x_delete">X</a></span></td></tr>');
+	
+	$('#tbl1 tr').last().fadeIn().after('<tr><td style="background-color:' + color + '"> [' + cnt + '] ' +'<span class="hexcode">' + color + '</span><span class="x_controls"><a href="javascript:void(0);" class="x_different">Different</a><a href="javascript:void(0);" class="x_delete">X</a></span></td></tr>');
 	cnt++;
 });
 
-//<span class="x_lock"><input type="checkbox" aria-label="..."> Lock</span><a href="javascript:void(0);" class="x_copy">Copy</a>
+
 
 $("#anc_rem").click(function () {
 	if ($('#tbl1 tr').size() > 1) {
 		$('#tbl1 tr:last-child').remove();
+		$( "#book" ).slideUp( "slow", function() {
+    
+  });
 	} else {
 		alert('One row should be present in table');
 	}
